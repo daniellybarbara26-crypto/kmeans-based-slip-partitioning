@@ -3,9 +3,9 @@ clear all;
 close all;
 
 load parameters
-tam=size(x_hist(:,2),1); % Number of available data samples
+tam=size(x_hist(:,1),1); % Number of available data samples
 
-% x_hist(:,2) corresponds to rotor resistance data, while x_hist(:,2) 
+% x_hist(:,1) corresponds to rotor resistance data, while x_hist(:,2) 
 % corresponds to rotor reactance data. Therefore, either column should be 
 % selected depending on the parameter for which the slip region partitioning is to be performed.
 y=x_hist(:,1); y=y/max(y);
@@ -13,7 +13,7 @@ x=(1:tam)';
 
 % The window size must be selected such that the data within each window 
 % can be adequately approximated by a linear model
-tj=4; % Moving window half-width
+tj=6; % Moving window half-width
 param = zeros(tam,2); % Initialization of the vector storing local linear coefficients
 
 % Estimation of local linear parameters using a moving window approach
