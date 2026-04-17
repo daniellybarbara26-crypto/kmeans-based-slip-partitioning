@@ -3,9 +3,9 @@ clear all;
 close all;
 
 load parameters
-tam=size(x_hist(:,1),1); % Number of available data samples
+tam=size(x_hist(:,2),1); % Number of available data samples
 
-% x_hist(:,1) corresponds to rotor resistance data, while x_hist(:,2) 
+% x_hist(:,2) corresponds to rotor resistance data, while x_hist(:,2) 
 % corresponds to rotor reactance data. Therefore, either column should be 
 % selected depending on the parameter for which the slip region partitioning is to be performed.
 y=x_hist(:,1); y=y/max(y);
