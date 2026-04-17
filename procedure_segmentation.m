@@ -13,7 +13,7 @@ x=(1:tam)';
 
 % The window size must be selected such that the data within each window 
 % can be adequately approximated by a linear model
-tj=8; % Moving window half-width
+tj=4; % Moving window half-width
 param = zeros(tam,2); % Initialization of the vector storing local linear coefficients
 
 % Estimation of local linear parameters using a moving window approach
